@@ -1,0 +1,31 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Library           Collections
+
+*** Test Cases ***
+test1
+    #BuiltIn
+    ${File}    Set Variable    MediaLab Altran
+    ${Lista}    Create List
+    #OperatingSystem
+    @{Lista}    List Files In Directory    C:/\Users/\Altran/\Documents
+    #Collections
+    Append to List    ${Lista}    ${File}
+    Log    ${Lista}
+    #Selenium2Library + String
+    ${website}    Set Variable    https://www.google.pt
+    : FOR    ${filename_ext}    IN    @{Lista}
+    \    ${filename}    Fetch from left    ${filename_ext}    .
+    \    ${num}    Get Length    ${filename}
+    \    Run Keyword If    ${num} > 6    OpenBrowserFunction    ${website}    ${filename}
+    \    Sleep    3
+    \    Close Browser
+
+*** Keywords ***
+OpenBrowserFunction
+    [Arguments]    ${website}    ${name}
+    Open Browser    ${website}    googlechrome
+    Input Text    id=lst-ib    ${name}
+    Click Button    name=btnG
