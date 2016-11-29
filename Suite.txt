@@ -4,7 +4,7 @@ Library           OperatingSystem
 Library           String
 Library           Collections
 
-*** Test Cases ***
+*** Test Cases ***ola
 test1
     #BuiltIn
     ${File}    Set Variable    MediaLab Altran
@@ -20,6 +20,7 @@ test1
     \    ${filename}    Fetch from left    ${filename_ext}    .
     \    ${num}    Get Length    ${filename}
     \    Run Keyword If    ${num} > 6    OpenBrowserFunction    ${website}    ${filename}
+    \    Take Screenshot
     \    Sleep    3
     \    Close Browser
 
