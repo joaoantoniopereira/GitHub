@@ -3,6 +3,7 @@ Library           Selenium2Library
 Library           OperatingSystem
 Library           String
 Library           Collections
+Library           Screenshot
 
 *** Test Cases ***
 test1
