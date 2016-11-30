@@ -25,6 +25,16 @@ test1
     \    Sleep    3
     \    Close Browser
 
+test2
+    ${File    Set Variable    MediaLab Altran
+
+test3
+    #BuiltIn
+    ${File}    Set Variable    MediaLab Altran
+    ${Lista}    Create List
+    #OperatingSystem
+    @{Lista}    List Files In Directory    C:/\Users/\Altran/\Documents
+
 *** Keywords ***
 OpenBrowserFunction
     [Arguments]    ${website}    ${name}
