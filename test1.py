@@ -1,9 +1,5 @@
 import xml.etree.ElementTree as ET
-import os, sys, re
-filepath=os.path.join(sys.argv[1], 'robot_results.xml')
-#filepath=r"{}\robot_results.xml".format(sys.argv[1])
-filepath = re.sub(r'\\','/',filepath)
-file = ET.parse(filepath)
+file = ET.parse('robot_results.xml')
 name = file.findall('suites/entry/suite/caseResults/entry')
 case = file.findall('suites/entry/suite/caseResults/entry/case')
 
