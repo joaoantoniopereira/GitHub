@@ -1,4 +1,9 @@
 import xml.etree.ElementTree as ET
+import time
+
+print "python"
+time.sleep(5)
+
 file = ET.parse('robot_results.xml')
 name = file.findall('suites/entry/suite/caseResults/entry')
 case = file.findall('suites/entry/suite/caseResults/entry/case')
