@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
-
-file = ET.parse('robot_results.xml')
+import os, sys
+filepath=os.path.join(sys.argv[1], 'robot_results.xml')
+file = ET.parse(filepath)
 name = file.findall('suites/entry/suite/caseResults/entry')
 case = file.findall('suites/entry/suite/caseResults/entry/case')
 
