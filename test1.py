@@ -1,9 +1,6 @@
 import xml.etree.ElementTree as ET
 import time
 
-print "python"
-time.sleep(5)
-
 file = ET.parse('robot_results.xml')
 name = file.findall('suites/entry/suite/caseResults/entry')
 case = file.findall('suites/entry/suite/caseResults/entry/case')
@@ -14,7 +11,6 @@ for c, n in zip(case, name):
     passed_failed.append(c.find('passed').text)
     start.append(c.find('starttime').text)
     end.append(c.find('endtime').text)
-    #errorM = c.find('errorMsg').text
     test_name.append(n.find('string').text)
 
 with open('parsed_robot_report.csv', 'wb') as fp:
