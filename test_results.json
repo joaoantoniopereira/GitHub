@@ -1,0 +1,26 @@
+{
+    "test_results": [
+        {
+            "grade": "SKIP", 
+            "long_message": "", 
+            "message": "Flashed image and booted successfully.", 
+            "name": "RootFSBootTest"
+        }, 
+        {
+            "grade": "OK", 
+            "long_message": "", 
+            "message": "Device on LAN can ping through router to internet.", 
+            "name": "LanDevPingInternet"
+        }, 
+        {
+            "grade": "OK", 
+            "long_message": "", 
+            "message": "Interact with console, wan, lan, wlan connections and re-run tests", 
+            "name": "Interact"
+        }
+    ], 
+    "tests_fail": 0, 
+    "tests_pass": 2, 
+    "tests_skip": 1, 
+    "tests_total": 3
+}
