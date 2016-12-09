@@ -6,6 +6,5 @@ grade = [k for k in res if 'grade' in k]
 
 if any("FAIL" in s for s in grade):
     raise Exception("At least a test has failed")
-    print "Failed"
 else:
     print "Everything is Ok"
