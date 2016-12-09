@@ -7,7 +7,7 @@
             "name": "RootFSBootTest"
         }, 
         {
-            "grade": "OK", 
+            "grade": "FAIL", 
             "long_message": "", 
             "message": "Device on LAN can ping through router to internet.", 
             "name": "LanDevPingInternet"
